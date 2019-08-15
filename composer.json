@@ -1,0 +1,31 @@
+{
+  "name": "swag/migration-own-profile-example",
+  "description": "Creat a own Migration Assistant profile",
+  "version": "v1.0.0",
+  "type": "shopware-platform-plugin",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "shopware AG"
+    }
+  ],
+  "require": {
+    "shopware/platform": "*"
+  },
+  "extra": {
+    "shopware-plugin-class": "SwagMigrationOwnProfileExample\\SwagMigrationOwnProfileExample",
+    "label": {
+      "de-DE": "Eigenes Migration Profile",
+      "en-GB": "Own migration profile"
+    },
+    "description": {
+      "de-DE": "Ein eigenes Profil für den Migrationsassitenten",
+      "en-GB": "A own Migration Assistant profile"
+    }
+  },
+  "autoload": {
+    "psr-4": {
+      "SwagMigrationOwnProfileExample\\": "src/"
+    }
+  }
+}
