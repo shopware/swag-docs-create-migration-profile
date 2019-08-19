@@ -28,7 +28,7 @@ class ProductReader implements ReaderInterface, LocalReaderInterface
     }
 
     /**
-     * Supports only a OwnProfile and the ProductDataSet
+     * Supports only an OwnProfile and the ProductDataSet
      */
     public function supports(MigrationContextInterface $migrationContext): bool
     {

@@ -36,7 +36,7 @@ class ProductConverter extends ShopwareConverter
     }
 
     /**
-     * Supports only a OwnProfile and the ProductDataSet
+     * Supports only an OwnProfile and the ProductDataSet
      */
     public function supports(MigrationContextInterface $migrationContext): bool
     {
@@ -133,23 +133,11 @@ class ProductConverter extends ShopwareConverter
             $this->context
         );
 
-        /**
-         * Return, if no currency is found
-         */
         if ($currencyUuid === null) {
             return [];
         }
 
         $price = [];
-        if ($currencyUuid !== Defaults::CURRENCY) {
-            $price[] = [
-                'currencyId' => Defaults::CURRENCY,
-                'gross' => $gross,
-                'net' => (float) $data['price'],
-                'linked' => true,
-            ];
-        }
-
         $price[] = [
             'currencyId' => $currencyUuid,
             'gross' => $gross,

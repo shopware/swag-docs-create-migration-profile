@@ -16,7 +16,7 @@ class ProductDataSelection implements DataSelectionInterface
     public const IDENTIFIER = 'products';
 
     /**
-     * Supports only a OwnProfile
+     * Supports only an OwnProfile
      */
     public function supports(MigrationContextInterface $migrationContext): bool
     {

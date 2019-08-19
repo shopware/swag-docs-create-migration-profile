@@ -19,7 +19,7 @@ class ProductDataSet extends DataSet
     }
 
     /**
-     * Supports only a OwnProfile
+     * Supports only an OwnProfile
      */
     public function supports(MigrationContextInterface $migrationContext): bool
     {
