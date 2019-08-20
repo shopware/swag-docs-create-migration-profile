@@ -1,6 +1,6 @@
 {
   "name": "swag/migration-own-profile-example",
-  "description": "Creat a own Migration Assistant profile",
+  "description": "Create your own Migration Assistant profile",
   "version": "v1.0.0",
   "type": "shopware-platform-plugin",
   "license": "MIT",
