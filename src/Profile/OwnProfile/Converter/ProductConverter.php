@@ -17,7 +17,7 @@ class ProductConverter extends ShopwareConverter
     /**
      * @var MappingServiceInterface
      */
-    private $mappingService;
+    protected $mappingService;
 
     /**
      * @var string
@@ -60,12 +60,13 @@ class ProductConverter extends ShopwareConverter
         /**
          * Gets the product uuid out of the mapping table or creates a new one
          */
-        $converted['id'] = $this->mappingService->createNewUuid(
+        $mapping = $this->mappingService->getOrCreateMapping(
             $migrationContext->getConnection()->getId(),
             ProductDataSet::getEntity(),
             $data['id'],
             $context
         );
+        $converted['id'] = $mapping['entityUuid'];
 
         $this->convertValue($converted, 'productNumber', $data, 'product_number');
         $this->convertValue($converted, 'name', $data, 'product_name');
@@ -105,12 +106,13 @@ class ProductConverter extends ShopwareConverter
          * If no tax rate is found, create a new one
          */
         if (empty($taxUuid)) {
-            $taxUuid = $this->mappingService->createNewUuid(
+            $mapping = $this->mappingService->getOrCreateMapping(
                 $this->connectionId,
                 DefaultEntities::TAX,
                 $data['id'],
                 $this->context
             );
+            $taxUuid = $mapping['entityUuid'];
         }
 
         return [
