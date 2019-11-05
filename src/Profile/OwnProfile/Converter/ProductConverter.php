@@ -112,7 +112,7 @@ class ProductConverter extends ShopwareConverter
                 $data['id'],
                 $this->context
             );
-            $converted['id'] = $mapping['entityUuid'];
+            $taxUuid = $mapping['entityUuid'];
         }
 
         return [
