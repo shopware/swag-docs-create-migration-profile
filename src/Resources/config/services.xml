@@ -31,6 +31,7 @@
 
         <service id="SwagMigrationOwnProfileExample\Profile\OwnProfile\Converter\ProductConverter">
             <argument type="service" id="SwagMigrationAssistant\Migration\Mapping\MappingService"/>
+            <argument type="service" id="SwagMigrationAssistant\Migration\Logging\LoggingService"/>
             <tag name="shopware.migration.converter"/>
         </service>
     </services>
