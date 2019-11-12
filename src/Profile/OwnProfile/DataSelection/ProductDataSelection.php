@@ -28,6 +28,7 @@ class ProductDataSelection implements DataSelectionInterface
         return new DataSelectionStruct(
             self::IDENTIFIER,
             $this->getEntityNames(),
+            $this->getEntityNamesRequiredForCount(),
             /*
              * Snippet of the original ProductDataSelection, if you
              * want to have a own title, you have to create a new snippet
@@ -47,5 +48,13 @@ class ProductDataSelection implements DataSelectionInterface
         return [
             ProductDataSet::getEntity()
         ];
+    }
+
+    /**
+     * @return string[]
+     */
+    public function getEntityNamesRequiredForCount(): array
+    {
+        return $this->getEntityNames();
     }
 }
