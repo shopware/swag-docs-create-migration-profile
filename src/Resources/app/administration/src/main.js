@@ -1,0 +1,1 @@
+import './own-profile/profile';
