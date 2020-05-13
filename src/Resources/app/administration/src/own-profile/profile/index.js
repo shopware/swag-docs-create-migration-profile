@@ -1,5 +1,5 @@
 import { Component } from 'src/core/shopware';
-import template from './swag-migration-profile-ownProfile-locale-credential-form.html.twig';
+import template from './swag-migration-profile-ownProfile-local-credential-form.html.twig';
 
 Component.register('swag-migration-profile-ownProfile-local-credential-form', {
     template,

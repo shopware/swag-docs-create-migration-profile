@@ -12,6 +12,10 @@ class OwnProfile implements ProfileInterface
 
     public const SOURCE_SYSTEM_VERSION = '1.0';
 
+    public const AUTHOR_NAME = 'shopware AG';
+
+    public const ICON_PATH = '/swagmigrationassistant/static/img/migration-assistant-plugin.svg';
+
     public function getName(): string
     {
         return self::PROFILE_NAME;
@@ -25,5 +29,15 @@ class OwnProfile implements ProfileInterface
     public function getVersion(): string
     {
         return self::SOURCE_SYSTEM_VERSION;
+    }
+
+    public function getAuthorName(): string
+    {
+        return self::AUTHOR_NAME;
+    }
+
+    public function getIconPath(): string
+    {
+        return self::ICON_PATH;
     }
 }
