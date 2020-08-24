@@ -27,8 +27,8 @@ class ProductDataSelection implements DataSelectionInterface
     {
         return new DataSelectionStruct(
             self::IDENTIFIER,
-            $this->getEntityNames(),
-            $this->getEntityNamesRequiredForCount(),
+            $this->getDataSets(),
+            $this->getDataSetsRequiredForCount(),
             /*
              * Snippet of the original ProductDataSelection, if you
              * want to have a own title, you have to create a new snippet
@@ -39,22 +39,17 @@ class ProductDataSelection implements DataSelectionInterface
     }
 
     /**
-     * Return all entity names, which should be migrated with this DataSelection
-     *
-     * @return string[]
+     * Return all DataSets, which should be migrated with this DataSelection
      */
-    public function getEntityNames(): array
+    public function getDataSets(): array
     {
         return [
-            ProductDataSet::getEntity()
+            new ProductDataSet()
         ];
     }
 
-    /**
-     * @return string[]
-     */
-    public function getEntityNamesRequiredForCount(): array
+    public function getDataSetsRequiredForCount(): array
     {
-        return $this->getEntityNames();
+        return $this->getDataSets();
     }
 }
