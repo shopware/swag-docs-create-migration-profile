@@ -10,7 +10,7 @@
     }
   ],
   "require": {
-    "shopware/platform": "*"
+    "shopware/core": "*"
   },
   "extra": {
     "shopware-plugin-class": "SwagMigrationOwnProfileExample\\SwagMigrationOwnProfileExample",
